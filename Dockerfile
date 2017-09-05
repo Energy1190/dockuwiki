@@ -1,7 +1,7 @@
 FROM debian
 
 RUN apt-get update -y \
-    && apt-get install -y wget lighttpd php5-cgi php5-gd php5-ldap php5-curl \
+    && apt-get install -y wget lighttpd php-cgi php-gd php-ldap php-curl \
     && rm -rf /var/lib/apt/lists/*
 
 RUN wget -g -O /dokuwiki.tgz https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz \
