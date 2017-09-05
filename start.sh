@@ -4,7 +4,7 @@ start_app (){
 exec /usr/sbin/lighttpd -D -f /etc/lighttpd/lighttpd.conf
 }
 
-if [ `ls old | wc -l` -eq 0 ]; then 
+if [ `ls /data | wc -l` -eq 0 ]; then 
 start_app
 else
 for obj in $(ls /data); do
