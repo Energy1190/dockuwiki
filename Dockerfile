@@ -14,7 +14,6 @@ RUN chown -R www-data:www-data /app && mkdir /data
 ADD dokuwiki.conf /etc/lighttpd/conf-available/20-dokuwiki.conf
 ADD start.sh /start.sh
 
-RUN lighty-enable-mod dokuwiki fastcgi accesslog
 RUN mkdir /var/run/lighttpd && chown -R www-data:www-data /var/run/lighttpd
 RUN chmod +x /start.sh
 
