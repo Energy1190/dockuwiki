@@ -1,7 +1,6 @@
 #!/bin/bash
 
 start_app (){
-exec lighty-enable-mod dokuwiki fastcgi accesslog
 exec /usr/sbin/lighttpd -D -f /etc/lighttpd/lighttpd.conf
 }
 
