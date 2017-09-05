@@ -9,7 +9,7 @@ RUN wget -O /dokuwiki.tgz https://download.dokuwiki.org/src/dokuwiki/dokuwiki-st
     && tar -zxf dokuwiki.tgz -C /app --strip-components 1 \
     && rm -f /dokuwiki.tgz
 
-RUN chown -R www-data:www-data /app
+RUN chown -R www-data:www-data /app && mkdir /data
 
 ADD dokuwiki.conf /etc/lighttpd/conf-available/20-dokuwiki.conf
 RUN lighty-enable-mod dokuwiki fastcgi accesslog
