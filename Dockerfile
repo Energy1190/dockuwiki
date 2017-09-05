@@ -4,7 +4,7 @@ RUN apt-get update -y \
     && apt-get install -y wget lighttpd php-cgi php-gd php-ldap php-curl \
     && rm -rf /var/lib/apt/lists/*
 
-RUN wget -g -O /dokuwiki.tgz https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz \
+RUN wget -O /dokuwiki.tgz https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz \
     && mkdir /app \
     && tar -zxf dokuwiki.tgz -C /app --strip-components 1 \
     && rm -f /dokuwiki.tgz
